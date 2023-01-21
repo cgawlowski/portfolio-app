@@ -5,3 +5,26 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+puts "Cleaning database..."
+Project.destroy_all
+
+puts "Creating fake projects"
+
+4.times do
+  Project.create(
+    name: Faker::Games::Pokemon.name,
+    description: Faker::Quotes::Shakespeare.hamlet_quote,
+    is_woodworking: true,
+    is_web: false
+  )
+
+  Project.create(
+    name: Faker::Games::Pokemon.name,
+    description: Faker::Quotes::Shakespeare.king_richard_iii_quote,
+    is_woodworking: false,
+    is_web: true
+  )
+end
+
+puts "Fake projects created!"
