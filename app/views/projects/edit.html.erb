@@ -1,0 +1,30 @@
+<h3 class="form-group">Veuillez modifier votre projet item</h3>
+
+<%= form_with model: @project, method: :patch do |f| %>
+
+  <div class="form-group">
+    <%= f.label :name, "Modifiez le nom" %>
+    <%= f.text_field :name, class:"form-control", placeholder: "Champ obligatoire" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :description, "Modifiez la description" %>
+    <%= f.text_area :description, class:"form-control" %>
+  </div>
+  <p>Sur quel page souhaitez-vous ajouter votre nouvel item ?</p>
+  <div>
+    <%= f.check_box :is_woodworking %>
+    <%= f.label :is_woodworking, "Woodworking" %>
+  </div>
+  <div>
+    <%= f.check_box :is_web %>
+    <%= f.label :is_web, "Web development" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.submit class:"btn btn-primary btn-lg btn-block" %>
+  </div>
+<% end %>
+
+<div>
+  <%= link_to 'Back to the main page', root_path %></p>
+</div>

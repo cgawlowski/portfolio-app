@@ -10,7 +10,6 @@ class ProjectsController < ApplicationController
 
   def new
     @project = Project.new
-    authorize @project
   end
 
   def create
@@ -24,9 +23,12 @@ class ProjectsController < ApplicationController
   end
 
   def edit
+    set_project
   end
 
   def update
+    set_project
+
     @project.update(project_params)
     redirect_to project_path(@project), notice: "Le projet a bien été mis à jour"
   end
@@ -44,7 +46,6 @@ class ProjectsController < ApplicationController
 
   def set_project
     @project = Project.find(params[:id])
-    authorize @project
   end
 
 end
