@@ -34,6 +34,7 @@ class ProjectsController < ApplicationController
   end
 
   def destroy
+    set_project
     @project.destroy
     redirect_to root_path(@project), notice: "Le projet a bien été supprimé"
   end
