@@ -42,7 +42,7 @@ class ProjectsController < ApplicationController
   private
 
   def project_params
-    params.require(:project).permit(:name, :description, :is_woodworking, :is_web, photos: [])
+    params.require(:project).permit(:name, :description, :is_woodworking, :is_web, :photo)
   end
 
   def set_project
