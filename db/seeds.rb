@@ -16,14 +16,16 @@ puts "Creating fake projects"
     name: Faker::TvShows::ParksAndRec.character,
     description: Faker::Quotes::Shakespeare.hamlet_quote,
     is_woodworking: true,
-    is_web: false
+    is_web: false,
+    preview_picture: "https://res.cloudinary.com/dus151ezt/image/upload/v1614447271/roadcypressesv_ivna6i.jpg"
   )
 
   Project.create(
     name: Faker::TvShows::ParksAndRec.character,
     description: Faker::Quotes::Shakespeare.king_richard_iii_quote,
     is_woodworking: false,
-    is_web: true
+    is_web: true,
+    preview_picture: "https://res.cloudinary.com/dus151ezt/image/upload/v1614127010/5s6z8a6rwu6qsgq09orajrt61zhd.jpg"
   )
 end
 
