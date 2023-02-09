@@ -1,10 +1,20 @@
-<div class="container red topBotomBordersIn">
+<div class="container yellow topBotomBordersIn">
 
-  <%= link_to "Cyrille", root_path %>
-  <%= link_to "Web", root_path %>
-  <%= link_to "Woodwork", root_path %>
-  <%= link_to "Contact", root_path %>
-  <%= link_to "FR", root_path %>
-  <%= link_to "EN", root_path %>
+  <div class="left">
+    <div>
+      <%= cl_image_tag("https://res.cloudinary.com/dus151ezt/image/upload/v1675912302/Avatar_vwmnxn.png",
+       crop: :fill) %>
+    </div>
+    <div>
+      <p>Cyrille</p>
+      <p>web developer</p>
+    </div>
+  </div>
+  <div>
+    <%= link_to "Home", root_path %>
+    <%= link_to "Web", root_path %>
+    <%= link_to "Woodwork", root_path %>
+    <%= link_to "Contact", root_path %>
+  </div>
 
 </div>
