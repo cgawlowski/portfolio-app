@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
+html, body
+{
+  margin: auto;
+  font-family: 'Inconsolata', monospace;
+  background: #EAE2B7;
+  min-height: 100vh;
+}
+
+.home {
+  height: 70vh;
+  padding: 0px 25px 0px 25px;
+
+  p {
+    font-family: 'Inconsolata';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 63px;
+    color: #003049;
+    margin-left: 50px;
+  }
+
+}
+
+.home--picture {
+  display: flex;
+  justify-content: center;
+
+}

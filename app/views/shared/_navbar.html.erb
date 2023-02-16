@@ -1,18 +1,18 @@
-<div class="navbar container yellow topBotomBordersIn">
+<div class="navbar container topBotomBordersIn">
 
-  <div class="left align-items">
+  <div class="logo">
     <div>
       <%= cl_image_tag("https://res.cloudinary.com/dus151ezt/image/upload/v1675912302/Avatar_vwmnxn.png",
        crop: :fill) %>
     </div>
-    <div>
+    <div class="logo--text">
       <p>Cyrille</p>
       <p>web developer</p>
     </div>
   </div>
   <div>
     <%= link_to "Home", root_path %>
-    <%= link_to "Web", root_path %>
+    <%= link_to "Web", projects_path %>
     <%= link_to "Woodwork", root_path %>
     <%= link_to "Contact", root_path %>
   </div>
