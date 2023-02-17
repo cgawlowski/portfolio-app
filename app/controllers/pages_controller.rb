@@ -4,18 +4,14 @@ class PagesController < ApplicationController
     @projects = Project.all
   end
 
-  def about
+  def contact
   end
 
-  def portfolio
+  def web
     @projects = Project.all
   end
 
-  def sketchbook
-    @projects = Project.all
-  end
-
-  def shopping
+  def woodwork
     @projects = Project.all
   end
 

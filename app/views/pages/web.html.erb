@@ -1,0 +1,14 @@
+<div>
+  <p>Web projects</p>
+  <% @projects.each do |project| %>
+    <% if project.is_web == true %>
+      <%# Actual pictures (Active Storage): %>
+      <%# <%= cl_image_tag project.photo.key, height: 300, width: 400, crop: :fill %>
+      
+      <%# Preview_picture (for Seed only): %>
+      <%= cl_image_tag project.preview_picture, height: 300, width: 400, crop: :fill %>
+      <%= link_to "See details", project_path(project)  %>
+    <% end %>
+  <% end %>
+  <h2><%= link_to "Add new project", new_project_path %></h2>
+</div>
