@@ -8,8 +8,12 @@ html, body
   min-height: 100vh;
 }
 
+.container {
+  height: 77vh;
+  margin: 5vh;
+}
+
 .home {
-  height: 78vh;
   padding: 0px 25px 0px 25px;
 
   a {

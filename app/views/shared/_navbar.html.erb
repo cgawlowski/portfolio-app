@@ -1,9 +1,10 @@
-<div class="navbar container topBotomBordersIn">
+<div class="topnav topBotomBordersIn">
 
   <div class="logo">
     <div>
-      <%= cl_image_tag("https://res.cloudinary.com/dus151ezt/image/upload/v1675912302/Avatar_vwmnxn.png",
-       crop: :fill) %>
+      <%= cl_image_tag(
+        "https://res.cloudinary.com/dus151ezt/image/upload/v1675912302/Avatar_vwmnxn.png",
+        crop: :fill) %>
     </div>
     <div class="logo--text">
       <p>Cyrille</p>
@@ -15,6 +16,7 @@
     <%= link_to "Web", web_path %>
     <%= link_to "Woodwork", woodwork_path %>
     <%= link_to "Contact", contact_path %>
+    <%= link_to "Login", contact_path %>
   </div>
 
 </div>
