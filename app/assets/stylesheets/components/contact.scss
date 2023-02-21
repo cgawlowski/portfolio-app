@@ -1,0 +1,31 @@
+.row--direction {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+}
+
+.profile--picture {
+  width: 90vh;
+  margin: 3vh;
+
+  img {
+    border-radius: 20px;
+    max-width: 100%;
+    height: auto;
+  }
+
+}
+
+.introduction {
+  h3 {
+    font-size: 3vh;
+    line-height: 4vh;
+    color: #FCBF49;
+  }
+  p {
+    font-size: 2.5vh;
+    line-height: 3vh;
+    color: #003049;
+  }
+
+}
