@@ -1,10 +1,21 @@
 <div class="container">
+  <h2><%= link_to "Add new project", new_project_path %></h2>
+
   <h1>Web projects</h1>
+
   <% @projects.each do |project| %>
     <% if project.is_web == true %>
-      <%= cl_image_tag project.photo.key, height: 300, width: 400, crop: :fill %>
-      <%= link_to "See details", project_path(project)  %>
+      <div class="card">
+
+        <% project.photos.each do |photo| %>
+          <% if project.photos[0] %>
+            <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+            <% break %> 
+          <% end %>
+        <% end %>
+        <%= link_to "See details", project_path(project)  %>
+      </div>
+
     <% end %>
   <% end %>
-  <h2><%= link_to "Add new project", new_project_path %></h2>
 </div>

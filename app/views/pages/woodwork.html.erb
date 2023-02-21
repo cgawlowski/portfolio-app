@@ -2,7 +2,14 @@
   <h1>Woodworking projects</h1>
   <% @projects.each do |project| %>
     <% if project.is_woodworking == true %>
-      <%= cl_image_tag project.photo.key, height: 300, width: 400, crop: :fill %>
+
+      <% project.photos.each do |photo| %>
+        <% if project.photos[0] %>
+          <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+          <% break %> 
+        <% end %>
+      <% end %>
+
       <%= link_to "See details", project_path(project)  %>
     <% end %>
   <% end %>
