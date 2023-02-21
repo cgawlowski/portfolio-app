@@ -13,7 +13,6 @@ Project.destroy_all
 puts "Creating fake projects"
 
 4.times do
-
   file = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg")
   project = Project.new(
     name: Faker::TvShows::ParksAndRec.character,
@@ -26,7 +25,6 @@ puts "Creating fake projects"
 end
 
 4.times do
-
   file = URI.open("https://res.cloudinary.com/dus151ezt/image/upload/v1615433854/phvdbcci6l17dqbu5lmjo2dcizzx.jpg")
   project = Project.new(
     name: Faker::TvShows::ParksAndRec.character,

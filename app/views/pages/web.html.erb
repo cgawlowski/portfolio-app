@@ -2,7 +2,6 @@
   <h1>Web projects</h1>
   <% @projects.each do |project| %>
     <% if project.is_web == true %>
-      <%# Actual pictures (Active Storage): %>
       <%= cl_image_tag project.photo.key, height: 300, width: 400, crop: :fill %>
       <%= link_to "See details", project_path(project)  %>
     <% end %>
