@@ -2,7 +2,7 @@
 
   <div class="form-group text-start">
 
-    <h3 class="form-group text-start">Veuillez entrer les détails de votre projet</h3>
+    <h4 class="form-group text-start">Veuillez entrer les détails de votre projet</h4>
 
     <%= form_with model: @project, method: :post do |f| %>
 
@@ -15,14 +15,14 @@
       </div>
 
       <div class="form-check">
-        <div>Sur quelle page souhaitez-vous ajouter votre nouvel item ?</div>
+        <div>Il s'agit d'un projet en...</div>
         <div>
           <%= f.check_box :is_woodworking %>
-          <%= f.label :is_woodworking, "Woodworking" %>
+          <%= f.label :is_woodworking, "Menuiserie" %>
         </div>
         <div>
           <%= f.check_box :is_web %>
-          <%= f.label :is_web, "Web development" %>
+          <%= f.label :is_web, "Web" %>
         </div>
       </div>
 
@@ -32,7 +32,7 @@
       </div>
 
       <div class="form-group text-end">
-        <%= f.submit class:"btn btn-primary btn-lg btn-block" %>
+        <%= f.submit class:"btn btn-success btn-lg btn-block" %>
       </div>
 
     <% end %>
@@ -46,7 +46,5 @@
   <div class="picture text-center">
     <%= cl_image_tag("https://res.cloudinary.com/dus151ezt/image/upload/v1614447271/roadcypressesv_ivna6i.jpg", crop: :fill) %>
   </div>
-
-
 
 </div>
