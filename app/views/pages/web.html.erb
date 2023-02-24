@@ -1,26 +1,36 @@
-<div class="container">
+<div class="web container">
   <h2><%= link_to "Add new project", new_project_path %></h2>
+  <div class="card-columns">
 
-  <div class="row">
-    <div class="col-6">
 
-      <% @projects.each do |project| %>
-        <% if project.is_web == true %>
+    <div class="row">
+      <div class="col-6">
 
-          <div class="card">
-            <% project.photos.each do |photo| %>
-              <% if project.photos[0] %>
-                <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
-                <% break %> 
-              <% end %>
-            <% end %>
-            <%= link_to "See details", project_path(project)  %>
-          </div>
+        <% @projects.each do |project| %>
+          <% if project.is_web == true %>
 
+              <div class="card">
+                <div class="card-img">
+                  <% project.photos.each do |photo| %>
+                    <% if project.photos[0] %>
+                      <%= cl_image_tag photo.key, crop: :fill %>
+                      <% break %> 
+                    <% end %>
+                  <% end %>
+                  <div class="card-img-overlay">
+                    <h3 class="card-title d-flex align-items-center "><%= link_to project.name, project_path(project) %></h3>
+                  </div>
+                </div>
+
+            </div>
+
+          <% end %>
         <% end %>
-      <% end %>
 
+      </div>
+      <div class="col-6">
+      </div>
     </div>
-  </div>
 
+  </div>
 </div>
