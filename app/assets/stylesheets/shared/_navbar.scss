@@ -44,6 +44,26 @@
   }
 }
 
+.no-style {
+  a:hover {
+    opacity: 0.5;
+    transition: opacity 0.5s;
+    text-decoration: none;
+  }
+
+  a:link {
+    text-decoration: none;
+  }
+
+  a:visited {
+    text-decoration: none;
+  }
+
+  a:active {
+    text-decoration: none;
+  }
+}
+
 // /* Top and Bottom borders come in */
 div.topBotomBordersIn a:before, div.topBotomBordersIn a:after
 {

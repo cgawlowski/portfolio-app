@@ -14,13 +14,15 @@
  *= require_self
  */
  @import "bootstrap";
-
- @import "components/navbar";
- @import "components/home";
- @import "components/footer";
- @import "components/contact";
- @import "components/cards";
- @import "components/new";
-
-
  @import "font-awesome";
+
+ @import "shared/navbar";
+ @import "shared/body";
+ @import "shared/footer";
+
+ @import "components/cards";
+ 
+ @import "pages/home";
+ @import "pages/new";
+ @import "pages/contact";
+
