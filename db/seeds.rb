@@ -13,8 +13,8 @@ Project.destroy_all
 puts "Creating fake projects"
 
 4.times do
-  file1 = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg")
-  file2 = URI.open("https://th.bing.com/th/id/R.3d88a927f8529dcba03364b09d98adbe?rik=JYmQaMVSULpYQg&riu=http%3a%2f%2fthewowstyle.com%2fwp-content%2fuploads%2f2015%2f01%2fnature-images.jpg&ehk=BNPsuSOUR7ATZ3EpRwxx1xFl7LUbO3tYlu1wFLCBrCE%3d&risl=&pid=ImgRaw&r=0")
+  file1 = URI.open("https://res.cloudinary.com/dus151ezt/image/upload/v1676948369/1c1gx15jk2totrqsdsj8xffwualz.jpg")
+  file2 = URI.open("https://res.cloudinary.com/dus151ezt/image/upload/v1677353242/draisienne-dsc4462-dxo-12-scaled_nfokei.jpg")
 
   project = Project.new(
     name: Faker::TvShows::ParksAndRec.character,
@@ -28,8 +28,8 @@ puts "Creating fake projects"
 end
 
 4.times do
-  file1 = URI.open("https://res.cloudinary.com/dus151ezt/image/upload/v1615433854/phvdbcci6l17dqbu5lmjo2dcizzx.jpg")
-  file2 = URI.open("https://th.bing.com/th/id/R.3d88a927f8529dcba03364b09d98adbe?rik=JYmQaMVSULpYQg&riu=http%3a%2f%2fthewowstyle.com%2fwp-content%2fuploads%2f2015%2f01%2fnature-images.jpg&ehk=BNPsuSOUR7ATZ3EpRwxx1xFl7LUbO3tYlu1wFLCBrCE%3d&risl=&pid=ImgRaw&r=0")
+  file1 = URI.open("https://res.cloudinary.com/dus151ezt/image/upload/v1616464656/rvfu9kn8dvu4gi6854ls3lov4i6w.jpg")
+  file2 = URI.open("https://res.cloudinary.com/dus151ezt/image/upload/v1614447271/roadcypressesv_ivna6i.jpg")
   project = Project.new(
     name: Faker::TvShows::ParksAndRec.character,
     description: Faker::Quotes::Shakespeare.hamlet_quote,
