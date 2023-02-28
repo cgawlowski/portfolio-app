@@ -2,7 +2,6 @@
 
 html, body
 {
-  margin: auto;
   font-family: 'Inconsolata', monospace;
   background: #EAE2B7;
   min-height: 100vh;
@@ -11,5 +10,6 @@ html, body
 
 .container {
   height: 77vh;
-  padding: 4vh 8vh 4vh 8vh;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
