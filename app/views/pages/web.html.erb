@@ -1,23 +1,6 @@
-<div class="container web">
-
-  <% @projects.each do |project| %>
-    <% if project.is_web == true %>
-      <div class="card">
-        <div class="card-img">
-
-          <% project.photos.each do |photo| %>
-            <% if project.photos[0] %>
-              <%= cl_image_tag photo.key, crop: :fill %>
-              <% break %> 
-            <% end %>
-          <% end %>
-          <div class="card-img-overlay">
-            <h3 class="card-title d-flex align-items-center "><%= link_to project.name, project_path(project) %></h3>
-          </div>
-          
-        </div>
-      </div>
-    <% end %>
-  <% end %>
-
+<div class="container web d-flex justify-content-center">
+  <div>
+    <h4 class="d-flex justify-content-center">Section under construction</h4>
+    <iframe src="https://giphy.com/embed/fVeAI9dyD5ssIFyOyM" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+  </div>
 </div>
