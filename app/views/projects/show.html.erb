@@ -39,7 +39,11 @@
 
     </div>
     <div>
-      <%= link_to "Retour à l'index", root_path, class: "btn btn-secondary" %>
+      <% if @project.is_web == true %>
+        <%= link_to "Retour", web_path, class: "btn btn-danger" %>
+      <% else @project.is_woodworking == true %>
+          <%= link_to "Retour", woodwork_path, class: "btn btn-dark" %>
+      <% end %>
     </div>
   </div>
 
