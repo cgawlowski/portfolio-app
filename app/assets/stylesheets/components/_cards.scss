@@ -1,4 +1,5 @@
 .card {
+
   img {
     width:100%;
   }
@@ -7,7 +8,7 @@
     font-style: normal;
     font-weight: 400;
     font-size: 4vh;
-    color: #003049;
+    color: #eae2b7;
   }
 
   a:hover {
@@ -26,6 +27,10 @@
     }
 }
 
+.card-body {
+  background-color: #d62828;
+
+}
 // .card-img-overlay {
 //   opacity: 0;
 //   transition: .5s ease;
