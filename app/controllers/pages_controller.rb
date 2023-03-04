@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:home, :contact, :web, :woodwork]
 
   def home
     @projects = Project.all
