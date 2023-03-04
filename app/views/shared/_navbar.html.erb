@@ -16,7 +16,9 @@
     <%= link_to "Web", web_path %>
     <%= link_to "Woodwork", woodwork_path %>
     <%= link_to "Contact", contact_path %>
-    <%= link_to "new project?", new_project_path %>
+    <% if user_signed_in? %>
+      <%= link_to "new project?", new_project_path %>
+    <% end %>
   </div>
 
 </div>
