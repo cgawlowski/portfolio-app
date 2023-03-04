@@ -13,6 +13,7 @@ gem "sprockets-rails"
 gem "pg", "~> 1.1"
 
 gem 'bootstrap'
+gem 'devise'
 
 gem 'faker'
 gem "cloudinary"
