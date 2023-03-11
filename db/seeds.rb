@@ -20,7 +20,8 @@ puts "Creating fake projects"
     name: Faker::TvShows::ParksAndRec.character,
     description: Faker::Quotes::Shakespeare.hamlet_quote,
     is_woodworking: true,
-    is_web: false
+    is_web: false,
+    user_id: 1
   )
   project.photos.attach(io: file1, filename: 'nes.png', content_type: 'image/png')
   project.photos.attach(io: file2, filename: 'nes.png', content_type: 'image/png')
@@ -34,7 +35,8 @@ end
     name: Faker::TvShows::ParksAndRec.character,
     description: Faker::Quotes::Shakespeare.hamlet_quote,
     is_woodworking: false,
-    is_web: true
+    is_web: true,
+    user_id: 1
   )
   project.photos.attach(io: file1, filename: 'nes.png', content_type: 'image/png')
   project.photos.attach(io: file2, filename: 'nes.png', content_type: 'image/png')
