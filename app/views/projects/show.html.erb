@@ -26,17 +26,20 @@
       <p><%= @project.description %></p>
     </div>
 
-    <% if current_user == @project.user %>
       <div class="d-flex flex-row justify-content-around">
-        <div>
-          <%= link_to "Mettre à jour", edit_project_path(@project), class: "btn btn-warning" %>
-        </div>
-        <div>
-          <%= link_to "Supprimer",
-            project_path(@project),
-            data: {turbo_method: :delete, turbo_confirm: "Sûr de ton coup, BG ?"},
-            class: "btn btn-danger" %>
-        </div>
+        <% if policy(@project).edit? %>
+          <div>
+            <%= link_to "Mettre à jour", edit_project_path(@project), class: "btn btn-warning" %>
+          </div>
+        <% end%>
+        <% if policy(@project).destroy? %>
+          <div>
+            <%= link_to "Supprimer",
+              project_path(@project),
+              data: {turbo_method: :delete, turbo_confirm: "Sûr de ton coup ?"},
+              class: "btn btn-danger" %>
+          </div>
+        <% end %>
       </div>
     <% end %>
 

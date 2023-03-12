@@ -2,19 +2,23 @@ class ProjectsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @projects = Project.all
+    @projects = policy_scope(Project)
   end
 
   def show
     @project = Project.find(params[:id])
+    authorize @project
   end
 
   def new
     @project = Project.new
+    authorize @project
   end
 
   def create
     @project = Project.new(project_params)
+    @project.user = current_user
+    authorize @project
 
     if @project.save
       redirect_to root_path(@project), notice: "Le nouveau projet a bien été créé"
@@ -48,6 +52,7 @@ class ProjectsController < ApplicationController
 
   def set_project
     @project = Project.find(params[:id])
+    authorize @project
   end
 
 end

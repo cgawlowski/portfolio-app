@@ -1,52 +1,56 @@
-<div class="container new-form d-flex justify-content-around">
+<% if policy(@project).create? %>
 
-  <div class="form-group text-start border border-light rounded p-4">
+  <div class="container new-form d-flex justify-content-around">
 
-    <h4 class="form-group text-start">Veuillez entrer les détails de votre projet</h4>
+    <div class="form-group text-start border border-light rounded p-4">
 
-    <%= form_with model: @project, method: :post do |f| %>
+      <h4 class="form-group text-start">Veuillez entrer les détails de votre projet</h4>
 
-      <div class="mb-3">
-        <%= f.text_field :name, class:"form-control", placeholder:"Indiquez le nom" %>
-      </div>
+      <%= form_with model: @project, method: :post do |f| %>
 
-      <div class="mb-3">
-        <%= f.text_area :description, class:"form-control", placeholder: "Ajoutez une description" %>
-      </div>
-
-      <div class="d-flex align-items-center justify-content-between">
         <div class="mb-3">
-          <div>Il s'agit d'un projet en :</div>
-          <div>
-            <%= f.check_box :is_woodworking %>
-            <%= f.label :is_woodworking, "Menuiserie" %>
-          </div>
-          <div>
-            <%= f.check_box :is_web %>
-            <%= f.label :is_web, "Web" %>
-          </div>
+          <%= f.text_field :name, class:"form-control", placeholder:"Indiquez le nom" %>
         </div>
 
         <div class="mb-3">
-          <div><%= f.label :photos, "Sélectionnez vos images :", class: "form-label" %></div>
-          <div><%= f.file_field :photos,  multiple: true, class:"form-control-file" %></div>
+          <%= f.text_area :description, class:"form-control", placeholder: "Ajoutez une description" %>
         </div>
+
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="mb-3">
+            <div>Il s'agit d'un projet en :</div>
+            <div>
+              <%= f.check_box :is_woodworking %>
+              <%= f.label :is_woodworking, "Menuiserie" %>
+            </div>
+            <div>
+              <%= f.check_box :is_web %>
+              <%= f.label :is_web, "Web" %>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <div><%= f.label :photos, "Sélectionnez vos images :", class: "form-label" %></div>
+            <div><%= f.file_field :photos,  multiple: true, class:"form-control-file" %></div>
+          </div>
+        </div>
+
+        <div class="mb-3 d-flex justify-content-center">
+          <%= f.submit class:"btn btn-primary btn-lg btn-block" %>
+        </div>
+
+      <% end %>
+
+      <div class="no-style d-flex align-items-end">
+        <%= link_to "Retour à l'accueil", root_path %>
       </div>
 
-      <div class="mb-3 d-flex justify-content-center">
-        <%= f.submit class:"btn btn-primary btn-lg btn-block" %>
-      </div>
+    </div>
 
-    <% end %>
-
-    <div class="no-style d-flex align-items-end">
-      <%= link_to "Retour à l'accueil", root_path %>
+    <div class="picture text-center">
+      <%= cl_image_tag("https://res.cloudinary.com/dus151ezt/image/upload/v1614447271/roadcypressesv_ivna6i.jpg", crop: :fill, class:"rounded") %>
     </div>
 
   </div>
 
-  <div class="picture text-center">
-    <%= cl_image_tag("https://res.cloudinary.com/dus151ezt/image/upload/v1614447271/roadcypressesv_ivna6i.jpg", crop: :fill, class:"rounded") %>
-  </div>
-
-</div>
+<% end %>
