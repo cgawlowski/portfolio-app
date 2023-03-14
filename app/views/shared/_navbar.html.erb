@@ -19,14 +19,7 @@
     <% if user_signed_in? %>
       <%= link_to "new project?", new_project_path %>
     <% end %>
-    <div class="d-flex flex-column align-self-center">
-      <% if user_signed_in? %> 
-        <div><%= current_user.email %></div>
-        <div><%= button_to "Sign out", destroy_user_session_path, class:"btn btn-danger btn-sm btn-block", method: :delete %></div>
-      <% else %>
-          <%= button_to "Sign in", new_user_session_path, class:"btn btn-danger btn-block" %> 
-      <% end %>
-    </div>
+
   </div>
 
 </div>
