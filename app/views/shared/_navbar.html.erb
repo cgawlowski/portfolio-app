@@ -1,6 +1,6 @@
 <div class="topnav topBotomBordersIn d-flex justify-content-between align-items-center">
 
-  <div class="logo d-flex flex-direction-row align-self-center">
+  <div class="logo d-flex align-self-center">
     <div>
       <%= cl_image_tag(
         "https://res.cloudinary.com/dus151ezt/image/upload/v1675912302/Avatar_vwmnxn.png",
@@ -19,7 +19,14 @@
     <% if user_signed_in? %>
       <%= link_to "new project?", new_project_path %>
     <% end %>
-    <%= link_to "Sign in", new_user_session_path %>
+    <div class="d-flex flex-column align-self-center">
+      <% if user_signed_in? %> 
+        <div><%= current_user.email %></div>
+        <div><%= button_to "Sign out", destroy_user_session_path, class:"btn btn-danger btn-sm btn-block", method: :delete %></div>
+      <% else %>
+          <%= button_to "Sign in", new_user_session_path, class:"btn btn-danger btn-block" %> 
+      <% end %>
+    </div>
   </div>
 
 </div>
