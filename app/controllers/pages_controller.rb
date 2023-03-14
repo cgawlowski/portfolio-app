@@ -16,4 +16,7 @@ class PagesController < ApplicationController
     @projects = Project.all
   end
 
+  def not_found
+  end
+
 end
