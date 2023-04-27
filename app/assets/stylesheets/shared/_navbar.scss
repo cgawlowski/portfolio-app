@@ -1,7 +1,7 @@
 .topnav {
   overflow: hidden;
   margin: 0 auto;
-  height: 15vh;
+  height: 15%;
   background: #FCBF49;
   
   padding: 0px 25px 0px 25px;
@@ -21,6 +21,14 @@
     cursor: pointer;
   }
 }
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index:100;
+  }
+
 
 .logo {
   text-decoration: none;

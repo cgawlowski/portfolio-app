@@ -1,4 +1,4 @@
-<div class="topnav d-flex justify-content-between align-items-center">
+<div class="topnav sticky d-flex justify-content-between align-items-center">
 
   <div class="logo d-flex align-self-center">
     <div>
@@ -16,7 +16,9 @@
     <%= link_to "Web", web_path %>
     <%= link_to "Woodwork", woodwork_path %>
     <%= link_to "Contact", contact_path %>
-    <%= link_to "New", new_project_path if policy(Project).new? %>
+    <% if current_user && current_user.admin? %>
+      <%= link_to "New", new_project_path %>
+    <% end %>
   </div>
 
 </div>
